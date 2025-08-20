@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Learning Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎓 Online Learning Platform</h1>
+    <nav>
+      <button onclick="showPage('loginPage')">Login</button>
+      <button onclick="showPage('signupPage')">Signup</button>
+      <button onclick="showPage('coursePage')">Courses</button>
+      <button onclick="showPage('quizPage')">Quiz</button>
+      <button onclick="showPage('progressPage')">Progress</button>
+    </nav>
+  </header>
+
+  <!-- Login Page -->
+  <section id="loginPage" class="page">
+    <h2>Login</h2>
+    <input type="text" id="loginUser" placeholder="Username">
+    <input type="password" id="loginPass" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </section>
+
+  <!-- Signup Page -->
+  <section id="signupPage" class="page hidden">
+    <h2>Signup</h2>
+    <input type="text" id="signupUser" placeholder="Username">
+    <input type="password" id="signupPass" placeholder="Password">
+    <button onclick="signup()">Signup</button>
+  </section>
+
+  <!-- Course Page -->
+  <section id="coursePage" class="page hidden">
+    <h2>Video Lessons</h2>
+    <video controls width="500">
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>Watch lessons and mark complete ✅</p>
+    <button onclick="markProgress('Video Lesson 1')">Mark Complete</button>
+  </section>
+
+  <!-- Quiz Page -->
+  <section id="quizPage" class="page hidden">
+    <h2>Quiz</h2>
+    <p>1. What does HTML stand for?</p>
+    <button onclick="checkAnswer(this,'correct')">Hyper Text Markup Language</button>
+    <button onclick="checkAnswer(this,'wrong')">High Tech Modern Language</button>
+    <button onclick="checkAnswer(this,'wrong')">Hyperlink Text Markdown Language</button>
+    <p id="quizResult"></p>
+  </section>
+
+  <!-- Progress Page -->
+  <section id="progressPage" class="page hidden">
+    <h2>📊 Progress Tracking</h2>
+    <ul id="progressList"></ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Online Learning Platform</p>
+  </footer>
+
+  <script src="nari.js"></script>
+</body>
+</html>
